@@ -124,6 +124,7 @@
 
 .calamansi-skin--calamansi-compact .clmns--controls {
     display: flex;
+    display: none;
     align-items: center;
     font-size: .8em;
     justify-content: center;
@@ -293,7 +294,6 @@
 
 .pause-custom img{
     width: 43px;
-    height: 43px;
 }
 
 .song-name-custom {
