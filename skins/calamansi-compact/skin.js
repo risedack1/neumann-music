@@ -28,8 +28,27 @@
     const volumeBtn = document.querySelectorAll('.clmns--volume-btn');
 
     volumeBtn.forEach(el => {
-        el.addEventListener('click', function () {
+        const toggleVolume = function () {
             el.classList.toggle('clmns--volume-btn-active');
+        }
+
+        console.log(el.childNodes);
+
+        el.addEventListener('click', function (e) {
+            e.stopPropagation();
+            toggleVolume();
+        });
+
+        document.addEventListener('click', function (e) {
+            const target = e.target;
+            const istVolumeBtn = target == el || el.contains(target);
+            const volumeActive = el.classList.contains('clmns--volume-btn-active');
+            const volumeChild = el.childNodes;
+            const isVolumeChild = target == volumeChild;
+
+            if (volumeActive && !isVolumeChild) {
+                toggleVolume();
+            }
         });
     });
 })();
