@@ -2316,3 +2316,9 @@ header .about-us__image {
         padding-top: 10px !important;
     }
 }
+
+@media screen and (orientation: portrait) {
+    .box__slider-img > img {
+        max-width: 100% !important;
+    }
+}
