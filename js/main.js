@@ -1,176 +1,146 @@
+document.addEventListener('DOMContentLoaded', () => {
+   const burgerButton = document.querySelector('.burger');
+   const closeButton = document.querySelector('.header__cross-menu');
+   const menu = document.querySelector('.header__inner');
+   const feetBackButton = document.querySelector('.header__btn-cooperation');
+   const feetBackClose = document.querySelector('.cooperation__close');
+   const feetBackForm = document.querySelector('.cooperation__menu');
+   const aboutBtn = document.querySelector('.about__btn-link');
+   const aboutUs = document.querySelector('.about-us');
+   const aboutClose = document.querySelector('.cross-about');
 
+   window.addEventListener('scroll', () => {
+      const topButton = document.querySelector('.footer__arrow');
+      let headerHeight = document.querySelector('.header').offsetHeight / 2;
+      let scrollHeight = window.scrollY;
 
-$(function () {
-   $('.header__btn').on('click', function(){
-    $('.cooperation__menu').toggleClass('active');
+      if (headerHeight < scrollHeight) {
+         topButton.classList.add('active');
+         menu.classList.remove('active-menu');
+      } else {
+         topButton.classList.remove('active');
+      }
    });
 
-   $('.form__btn, .cross').on('click', function(){
-    $('.cooperation__menu, body').removeClass('active');
+   aboutBtn.addEventListener('click', () => {
+      aboutUs.classList.add('active-about');
    });
 
+   aboutClose.addEventListener('click', () => {
+      aboutUs.classList.remove('active-about');
+   });
 
-   $('.about__btn').on('click', function(){
-      $('.about-us').toggleClass('active-about');
-     });
-  
-     $('.cross-about').on('click', function(){
-      $('.about-us').removeClass('active-about');
-     });
+   const toggleMenu = function () {
+      feetBackForm.classList.toggle('active');
+   };
 
-     $('.burger').on('click', function(){
-      $('.header__inner').toggleClass('active-menu');
-     });
+   feetBackClose.addEventListener('click', function () {
+      toggleMenu();
+   });
 
-     $('.header__menu-item, .header__cross-menu ').on('click', function(){
-      $('.header__inner').removeClass('active-menu');
-     });
-     
+   feetBackButton.addEventListener('click', function (e) {
+      e.stopPropagation();
+      toggleMenu();
+   });
 
-     
+   document.addEventListener('click', function (e) {
+      const target = e.target;
+      const its_feetBackForm = target == feetBackForm || feetBackForm.contains(target);
+      const its_feetBackButton = target == feetBackButton;
+      const feetBack_is_active = feetBackForm.classList.contains('active');
 
-  
+      if (!its_feetBackForm && !its_feetBackButton && feetBack_is_active) {
+         toggleMenu();
+      }
+   });
 
+   burgerButton.addEventListener('click', () => {
+      menu.classList.add('active-menu');
+   });
 
-
- 
-   $(document).mouseup(function (e){ 
-		var div = $("#nav"); 
-		if (!div.is(e.target) 
-		    && div.has(e.target).length === 0) { 
-            $('.cooperation__menu').removeClass('active'); 
-		}
-	});
-
-   $(".button").click(function() {
-      $('.toggled_block').toggle();
-    });
-
-   $(document).ready(function () {
-      $('input,textarea').focus(function(){
-        $(this).data('placeholder',$(this).attr('placeholder'))
-        $(this).attr('placeholder','');
-      });
-      $('input,textarea').blur(function(){
-        $(this).attr('placeholder',$(this).data('placeholder'));
-      });
-      });
-
-      $(document).ready(function(){
-         $("a").on('click', function(event) {
-           if (this.hash !== "") {
-             event.preventDefault();
-             var hash = this.hash;
-             $('html, body').animate({
-               scrollTop: $(hash).offset().top
-             }, 800, function(){
-               window.location.hash = hash;
-             });
-           }
-         });
-       });
-
-       $ ('.sliderbar').slick({
-         infinite: true,
-         slidesToShow: 3,
-         slidesToScroll: 3,
-         centerMode: true,
-         centerPadding: '0px',
-         rows: 2,
-         responsive: [
-            {
-              breakpoint: 848,
-              settings: {
-               slidesToShow: 2,
-               slidesToScroll: 2,
-               rows: 2,
-              }
-            },
-            {
-               breakpoint: 607,
-               settings: {
-                slidesToShow: 1,
-                rows: 1,
-                centerMode: true,
-                centerPadding: '0px',
-               }
-             },
-            
-          ]
-       });
-})
-
-
-
-
-
-const player = document.querySelector('.example__box-player'),
-playBtn = document.querySelector('.example__box-player__img'),
-audio = document.querySelector('.audio'),
-progressContainer = document.querySelector('.progress__container'),
-progress = document.querySelector('.progress'),
-imgSrc = document.querySelector('.img__src')
-
-
-
-
-function updateProgress(e) {
-   const {duration, currentTime} = e.srcElement
-   const progressPercent = (currentTime / duration) * 100
-   progress.style.width = `${progressPercent}%` 
-}
-audio.addEventListener('timeupdate', updateProgress)
-
-function playSong() {
-   player.classList.add('play')
-   imgSrc.src = "../images/pause.png"
-   audio.play()
-}
-
-function pauseSong() {
-   player.classList.remove('play')
-   imgSrc.src = '../images/play.png'
-   audio.pause()
-}
-
-playBtn.addEventListener('click', () =>{
-   const isPlaying = player.classList.contains('play')
-   if (isPlaying) {
-      pauseSong()
-   } else {
-      playSong()
-   }
-})
-
-function setProgress (e) {
-   const width = this.clientWidth
-   const clickX = e.offsetX
-   const duration = audio.duration
-   audio.currentTime = (clickX / width) * duration
-}
-progressContainer.addEventListener('click', setProgress)
-
-
-
-let btn = document.querySelector('.footer__arrow')
-//
-function magic() {
-  if (window.pageYOffset > 20) {
-    btn.style.opacity = '1'
-  } else { btn.style.opacity = '0' }
-}
-//
-btn.onclick = function () {
-	window.scrollTo(0,0)
-}
-
-// When scrolling, we run the function
-window.onscroll = magic
-
-
-$(function() {  
-   $("body").niceScroll({
-      mousescrollstep: 19,
-      zindex: "1"
+   closeButton.addEventListener('click', () => {
+      menu.classList.remove('active-menu');
    });
 });
+
+
+const swiper = new Swiper('.box__inner', {
+   slidesPerView: 1,
+   grid: {
+      rows: 1,
+   },
+
+   navigation: {
+      nextEl: '.slider-button-next',
+      prevEl: '.slider-button-prev',
+   },
+
+   breakpoints: {
+      768: {
+         slidesPerView: 3,
+         grid: {
+            rows: 2,
+         },
+         spaceBetween: 20,
+      }
+   },
+});
+
+const sliderSecondMain = document.querySelectorAll('.slider-main');
+const sliderSecondInner = document.querySelectorAll('.slider-wrapper');
+const sliderSecondSlide = document.querySelectorAll('.slider-slide');
+
+function secondSlider() {
+   sliderSecondMain.forEach(el => {
+      el.classList.add('swiper');
+   });
+   sliderSecondInner.forEach(el => {
+      el.classList.add('swiper-wrapper');
+   });
+
+   sliderSecondSlide.forEach(el => {
+      el.classList.add('swiper-slide');
+   });
+}
+
+function slideCheck() {
+   let innerWidth = window.innerWidth;
+   if (innerWidth > 767) {
+
+   } else {
+      secondSlider();
+      const swiperSecond = new Swiper('.slider-main', {
+         slidesPerView: 1,
+
+         navigation: {
+            nextEl: '.slider-second-button-next',
+            prevEl: '.slider-second-button-prev',
+         },
+      });
+   }
+}
+slideCheck();
+
+Calamansi.autoload();
+
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+window.addEventListener('resize', () => {
+   let vh = window.innerHeight * 0.01;
+   document.documentElement.style.setProperty('--vh', `${vh}px`);
+   slideCheck();
+});
+
+const smoothLinks = document.querySelectorAll('a[href^="#"]');
+for (let smoothLink of smoothLinks) {
+   smoothLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      const id = smoothLink.getAttribute('href');
+
+      document.querySelector(id).scrollIntoView({
+         behavior: 'smooth',
+         block: 'start'
+      });
+   });
+};
