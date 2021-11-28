@@ -2127,6 +2127,11 @@ header .about-us__image {
 }
 
 @media (max-width: 767px) {
+    .full-page-custom {
+        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100) !important;
+        transition: all 0.9s;
+    }
     .example__boxes {
         margin-bottom: 10%;
     }
