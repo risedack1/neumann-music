@@ -152,35 +152,26 @@ window.addEventListener('resize', () => {
    slideCheck();
 });
 
-const anchors = [].slice.call(document.querySelectorAll('a[href*="#"]')),
-   animationTime = 300,
-   framesCount = 20;
-
-anchors.forEach(function (item) {
-   // каждому якорю присваиваем обработчик события
-   item.addEventListener('click', function (e) {
-      // убираем стандартное поведение
-      e.preventDefault();
-
-      // для каждого якоря берем соответствующий ему элемент и определяем его координату Y
-      let coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top + window.pageYOffset;
-
-      // запускаем интервал, в котором
-      let scroller = setInterval(function () {
-         // считаем на сколько скроллить за 1 такт
-         let scrollBy = coordY / framesCount;
-
-         // если к-во пикселей для скролла за 1 такт больше расстояния до элемента
-         // и дно страницы не достигнуто
-         if (scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
-            // то скроллим на к-во пикселей, которое соответствует одному такту
-            window.scrollBy(0, scrollBy);
+var linkNav = document.querySelectorAll('[href^="#"]'), //выбираем все ссылки к якорю на странице
+   V = 0.3; // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
+for (var i = 0; i < linkNav.length; i++) {
+   linkNav[i].addEventListener('click', function (e) { //по клику на ссылку
+      e.preventDefault(); //отменяем стандартное поведение
+      var w = window.pageYOffset, // производим прокрутка прокрутка
+         hash = this.href.replace(/[^#]*(.*)/, '$1'); // к id элемента, к которому нужно перейти
+      t = document.querySelector(hash).getBoundingClientRect().top, // отступ от окна браузера до id
+         start = null;
+      requestAnimationFrame(step); // подробнее про функцию анимации [developer.mozilla.org]
+      function step(time) {
+         if (start === null) start = time;
+         var progress = time - start,
+            r = (t < 0 ? Math.max(w - progress / V, w + t) : Math.min(w + progress / V, w + t));
+         window.scrollTo(0, r);
+         if (r != w + t) {
+            requestAnimationFrame(step)
          } else {
-            // иначе добираемся до элемента и выходим из интервала
-            window.scrollTo(0, coordY);
-            clearInterval(scroller);
+            location.hash = hash // URL с хэшем
          }
-         // время интервала равняется частному от времени анимации и к-ва кадров
-      }, animationTime / framesCount);
-   });
-});
+      }
+   }, false);
+}
