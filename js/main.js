@@ -63,6 +63,17 @@ document.addEventListener('DOMContentLoaded', () => {
    });
 });
 
+new fullpage('#fullpage', {
+   //options here
+   autoScrolling: false,
+   scrollHorizontally: false,
+   autoScrolling: false
+});
+
+fullpage_api.setFitToSection(true);
+fullpage_api.setScrollingSpeed(700);
+
+
 
 const swiper = new Swiper('.box__inner', {
    slidesPerView: 1,
@@ -76,8 +87,16 @@ const swiper = new Swiper('.box__inner', {
    },
 
    breakpoints: {
-      768: {
+      1600: {
          slidesPerView: 3,
+         grid: {
+            rows: 2,
+         },
+         spaceBetween: 20,
+      },
+
+      768: {
+         slidesPerView: 4,
          grid: {
             rows: 2,
          },
