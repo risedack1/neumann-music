@@ -49,10 +49,50 @@ body {
     flex: 1 0 auto; */
 }
 
+.full-page-wrapper {
+    height: 120vh;
+    /* height: calc(var(--vh, 1vh) * 120); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.full-page-wrapper--process {
+    position: relative;
+    background-image:  linear-gradient(270deg, #83F283 0%, #33EF95 16.67%, #00EBA9 31.77%, #00E7BC 41.67%, #00C5C8 52.6%, #32A3C4 64.58%, #8881BD 74.48%, #C257B7 84.9%, #FF15AC 100%);
+    background-position: 0 0, 50% 50%;
+    background-size: cover, 100%;
+    background-repeat: no-repeat;
+}
+
+.full-page-custom--footer {
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+.full-page-wrapper--process::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
 .full-page-custom {
     height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
+    /* height: calc(var(--vh, 1vh) * 100); */
     transition: all 0.9s;
+}
+
+.work__progress {
+    background-image: url('../images/guitar.svg'), url('../images/notes-process-bg.svg'), url('../images/circle-dots-bg.svg'), url('../images/drums.svg');
+    background-repeat: no-repeat;
+    background-position: 10% 0, 95% 20%, 100% 60%, 90% 90%;
+    background-size: 20%, 12%, 5%, 10%;
 }
 
 .footer {
@@ -2128,10 +2168,11 @@ header .about-us__image {
 
 @media (max-width: 767px) {
     .full-page-custom {
-        height: 100vh;
-        height: calc(var(--vh, 1vh) * 100) !important;
+        height: 100vh !important;
+        /* height: calc(var(--vh, 1vh) * 100) !important; */
         transition: all 0.9s;
     }
+
     .example__boxes {
         margin-bottom: 10%;
     }
@@ -2154,7 +2195,7 @@ header .about-us__image {
     .slider-buttons {
         position: absolute;
         max-width: 100px;
-        bottom: 5%;
+        bottom: 12vh;
         right: auto;
         left: 50%;
         margin: 0;
@@ -2164,7 +2205,7 @@ header .about-us__image {
     .slider-second-button-next,
     .slider-second-button-prev {
         position: absolute;
-        bottom: 30px;
+        bottom: 12vh;
         left: 40%;
         z-index: 10;
         width: 20px;
