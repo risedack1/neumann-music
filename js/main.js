@@ -63,18 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
    });
 });
 
-new fullpage('#fullpage', {
-   //options here
-   autoScrolling: false,
-   scrollHorizontally: false,
-   autoScrolling: false,
-   responsiveWidth: 767,
-});
-
-fullpage_api.setFitToSection(true);
-fullpage_api.setScrollingSpeed(700);
-
-
 
 const swiper = new Swiper('.box__inner', {
    slidesPerView: 1,
