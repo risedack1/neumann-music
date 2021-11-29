@@ -136,7 +136,6 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 $(function () {
 
-<<<<<<< HEAD
     $('.header__menu a, .footer__arrow a, .about__arrow a').on("click", function (event) {
         event.preventDefault();
         var id = $(this).attr('href'),
@@ -146,14 +145,3 @@ $(function () {
         }, 1500);
     });
 });
-=======
-   $('.header__menu a, .footer__arrow a').on("click", function (event) {
-      event.preventDefault();
-      var id = $(this).attr('href'),
-         top = $(id).offset().top;
-      $('body,html').animate({
-         scrollTop: top
-      }, 1500);
-   });
-});
->>>>>>> refs/remotes/origin/main
