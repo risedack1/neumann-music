@@ -84,6 +84,7 @@ body {
 
 .full-page-custom {
     height: 100vh;
+<<<<<<< HEAD
     /* height: calc(var(--vh, 1vh) * 100); */
     transition: all 0.9s;
 }
@@ -93,6 +94,14 @@ body {
     background-repeat: no-repeat;
     background-position: 10% 0, 95% 20%, 100% 60%, 90% 90%;
     background-size: 20%, 12%, 5%, 10%;
+=======
+    height: calc(var(--vh, 1vh) * 120);
+    transition: all 0.9s;
+}
+
+.full-page-custom--small {
+    height: calc(var(--vh, 1vh) * 100);
+>>>>>>> refs/remotes/origin/main
 }
 
 .footer {
@@ -2168,11 +2177,22 @@ header .about-us__image {
 
 @media (max-width: 767px) {
     .full-page-custom {
+<<<<<<< HEAD
         height: 100vh !important;
         /* height: calc(var(--vh, 1vh) * 100) !important; */
         transition: all 0.9s;
     }
 
+=======
+        height: 100vh;
+        height: calc(var(--vh, 1vh) * 120) !important;
+        transition: all 0.9s;
+    }
+    
+    .full-page-custom--small {
+        height: calc(var(--vh, 1vh) * 100) !important;
+    }
+>>>>>>> refs/remotes/origin/main
     .example__boxes {
         margin-bottom: 10%;
     }
