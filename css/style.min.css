@@ -2173,6 +2173,10 @@ header .about-us__image {
         transition: all 0.9s;
     }
 
+    .full-page-custom--header {
+        height: 90vh !important;
+    }
+
     .example__boxes {
         margin-bottom: 10%;
     }
