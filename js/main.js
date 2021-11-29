@@ -134,12 +134,6 @@ Calamansi.autoload();
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-window.addEventListener('resize', () => {
-   let vh = window.innerHeight * 0.01;
-   document.documentElement.style.setProperty('--vh', `${vh}px`);
-   slideCheck();
-});
-
 $(function () {
 
    $('.header__menu a, .footer__arrow a').on("click", function (event) {
