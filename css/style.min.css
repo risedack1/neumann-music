@@ -2162,7 +2162,7 @@ header .about-us__image {
     .slider-buttons {
         position: absolute;
         max-width: 100px;
-        bottom: 5%;
+        bottom: 12vh;
         right: auto;
         left: 50%;
         margin: 0;
@@ -2172,7 +2172,7 @@ header .about-us__image {
     .slider-second-button-next,
     .slider-second-button-prev {
         position: absolute;
-        bottom: 30px;
+        bottom: 12vh;
         left: 40%;
         z-index: 10;
         width: 20px;
