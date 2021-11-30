@@ -75,6 +75,12 @@ const swiper = new Swiper('.box__inner', {
         prevEl: '.slider-button-prev',
     },
 
+    pagination: {
+        el: '.box__inner-pagination',
+        clickable: true,
+        dynamicBullets: true,
+    },
+
     breakpoints: {
         1600: {
             slidesPerView: 3,
@@ -82,6 +88,10 @@ const swiper = new Swiper('.box__inner', {
                 rows: 2,
             },
             spaceBetween: 20,
+
+            pagination: {
+                dynamicBullets: false,
+            },
         },
 
         768: {
@@ -90,6 +100,10 @@ const swiper = new Swiper('.box__inner', {
                 rows: 2,
             },
             spaceBetween: 20,
+
+            pagination: {
+                dynamicBullets: false,
+            },
         }
     },
 });
