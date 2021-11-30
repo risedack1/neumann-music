@@ -2277,11 +2277,6 @@ header .about-us__image {
 }
 
 @media (max-width: 567px) and (min-height: 770px) {
-    .finished__work,
-    .example,
-    .work__progress {
-        transform: translateY(-20%);
-    }
 }
 
 @media (max-width: 600px) {
@@ -2296,7 +2291,7 @@ header .about-us__image {
     .finished__work-inner,
     .example__inner,
     .work__progress-inner {
-        transform: translateY(-20%);
+        transform: translateY(-10%);
     }
 
     .example-slick-prev,
