@@ -2293,6 +2293,12 @@ header .about-us__image {
         padding-top: 20px !important;
     }
 
+    .finished__work,
+    .example,
+    .work__progress {
+        transform: translateY(-20%);
+    }
+
     .example-slick-prev,
     .example-slick-next {
         position: absolute;
