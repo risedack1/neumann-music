@@ -31,21 +31,25 @@
     min-height: 100%;
 }
 .popup__body {
-    padding: 50px;
+    padding: 40px 70px 33px 44px;
     width: 100%;
-    max-width: 800px;
-    background-color: #fff;
+    max-width: 1034px;
+    background-color: #16162a;
     transform: scale(0);
     transition: all 0.3s ease 0s;
+    color: #fff;
 }
 .popup__close {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 20px;
+    top: 20px;
     z-index: 30;
-    width: 15px;
-    height: 15px;
-    background: url("../images/note-bg.svg") 0 0 no-repeat;
+    width: 30px;
+    height: 30px;
+    background-image: url("../images/popup-song/close.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     cursor: pointer;
 }
 .popup.show {
@@ -68,4 +72,361 @@
 .popup._active .popup__body {
     transform: scale(1);
     transition: all 0.3s ease 0.2s;
+}
+
+.popup__title {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 18px;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: -webkit-gradient(linear,  left top,  right top,  from(#ff1bad),  to(#0aef98));
+    background-image: -o-linear-gradient(left,  #ff1bad,  #0aef98);
+    background-image: linear-gradient(to right,  #ff1bad,  #0aef98);
+}
+
+.popup__inner {
+    display: flex;
+}
+
+.popup__left {
+    flex: 1 0 40%;
+    margin-right: 50px;
+}
+
+.popup__left-image {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.popup__left-image img {
+    width: 100%;
+    height: auto;
+}
+
+.popup-remember {
+
+}
+
+.popup-remember__title {
+    display: block;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 35px;
+    text-transform: uppercase;
+    margin-bottom: 11px;
+}
+
+.popup-remember__list {
+    margin-bottom: 20px;
+}
+
+.popup-remember__item {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #cad0d8;
+    margin-bottom: 3px;
+}
+
+.music-social {
+    display: flex;
+    align-items: center;
+}
+
+.music-social__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #cad0d8;
+    margin-right: 11px;
+}
+
+.music-social__list {
+    display: flex;
+    align-items: center;
+}
+
+.music-social__item:not(:last-child) {
+    margin-right: 3px;
+}
+
+.popup-right {
+
+}
+
+.popup__singer {
+    display: block;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 35px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.popup__song {
+    display: block;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 35px;
+    margin-bottom: 30px;
+}
+
+.popup__player {
+    margin-bottom: 40px;
+}
+
+.popup__about {
+    margin-bottom: 55px;
+}
+
+.popup__about-title {
+    display: block;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 35px;
+    text-transform: uppercase;
+    margin-bottom: 11px;
+}
+
+.popup__about-text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #cad0d8;
+}
+
+.popup__another {
+
+}
+
+.popup__another-title {
+    display: block;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 35px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.popup__another-item {
+    margin-bottom: 10px; 
+}
+
+.another-item {
+    display: flex;
+    align-items: center;
+}
+
+.another-item__image {
+    width: 75px;
+    height: 75px;
+    border-radius: 6px;
+    margin-right: 23px;
+}
+
+.another-item__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.another-item__text {
+    margin-right: 43px;
+    color: #f2f2f2;
+}
+
+.another-item__name {
+    display: block;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 33px;
+}
+
+.another-item__song {
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.another-item__button {
+    text-align: center;
+    padding: 6px 16px;
+    background-image: linear-gradient(270deg, #83F283 0%, #33EF95 16.67%, #00EBA9 31.77%, #00E7BC 41.67%, #00C5C8 52.6%, #32A3C4 64.58%, #8881BD 74.48%, #C257B7 84.9%, #FF15AC 100%);
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 11px;
+}
+
+@media (max-width: 1100px) {
+    .popup__body {
+        padding: 40px 20px 33px 20px;
+    }
+
+    .popup__left {
+        margin-right: 30px;
+    }
+
+    .music-social__title {
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: 992px) {
+    /* .popup__inner {
+        flex-direction: column;
+    }
+
+    .popup__left {
+        flex: 1 0 100%;
+        margin-right: 0;
+    } */
+
+    .popup__singer {
+        font-size: 22px;
+        line-height: 26px;
+
+    }
+
+    .popup__song {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .popup__player {
+        margin-bottom: 20px;
+    }
+
+    .popup__about-title {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    .popup__about-text {
+        font-size: 16px;
+    }
+
+    .popup__about {
+        margin-bottom: 24px;
+    }
+
+    .popup__another-title {
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 16px;
+    }
+
+    .popup-remember__title {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    .popup-remember__item {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    
+    .music-social__title {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .music-social__item {
+        width: 20px;
+        height: 20px;
+    }
+    .another-item__name {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .another-item__image {
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
+    }
+
+    .another-item__text {
+        margin-right: 10px;
+    }
+
+    .another-item__song {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .popup__inner {
+        flex-direction: column;
+    }
+
+    .popup__title {
+        font-size: 18px;
+    }
+
+    .popup__left {
+        margin-right: 0;
+        flex: 1 0 100%;
+    }
+
+    .popup__left-image {
+        max-width: 360px;
+        margin: 0 auto 25px;
+    }
+
+    .popup__music-social {
+        margin-bottom: 20px;
+    }
+
+    .another-item__image {
+        flex-shrink: 0;
+    }
+
+    .another-item__text {
+        flex-shrink: 0;
+    }
+
+    .another-item__button {
+        flex-shrink: 1;
+    }
+}
+
+@media (max-width: 567px) {
+    .another-item__name {
+        font-size: 14px;
+    }
+
+    .another-item__song {
+        font-size: 12px;
+    }
+
+    .music-social__title {
+        margin-right: 10px;
+    }
+
+    .music-social__item {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 360px) {
+    .another-item__name {
+        font-size: 12px;
+    }
+
+    .another-item__image {
+        width: 50px;
+        height: 50px;
+    }
+
+    .popup__player .song-subtitle {
+        font-size: 9px;
+    }
 }
