@@ -2293,9 +2293,9 @@ header .about-us__image {
         padding-top: 20px !important;
     }
 
-    .finished__work,
-    .example,
-    .work__progress {
+    .finished__work-inner,
+    .example__inner,
+    .work__progress-inner {
         transform: translateY(-20%);
     }
 
