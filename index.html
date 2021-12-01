@@ -104,7 +104,7 @@
                   <p> Nuemann Music - мы создаем с нуля качественную музыку и занимаемся ее продвижением.
                   </p> <br>
                   <p>
-                    Что именно мы делаем :<br>
+                    Что именно мы делаем :<br><br>
                   </p>
 
                   <ul>
@@ -370,7 +370,7 @@
               В данном разделе примеры наших работ <br>
               До и После
             </div>
-            <div class="example__boxes slider-main">
+            <div class="example__boxes slider-main slider-main--first">
               <div class="example__boxes-inner slider-wrapper">
                 <div class="example__box-wrapper slider-slide">
                   <div class="example__result">Пример 1 (сведение + мастеринг)</div>
@@ -430,8 +430,11 @@
               </div>
             </div>
           </div>
-          <div class="slider-second-button-prev"></div>
-          <div class="slider-second-button-next"></div>
+          <!-- <div class="slider-second-button-prev"></div>
+          <div class="slider-second-button-next"></div> -->
+          <div class="example__pagination">
+            <div class="slider-main-pagination"></div>
+          </div>
         </div>
       </section>
     </div>
@@ -439,7 +442,7 @@
     <div class="full-page-wrapper full-page-wrapper--process">
       <section class="work__progress full-page-custom" id="progress">
         <div class="work__progress-inner">
-          <div class="container">
+          <div class="container container--work">
             <div class="work__progress-title">
               Работы в процессе
             </div>
@@ -448,7 +451,7 @@
               Если у вас есть желание принять в них свое участие, напишите нам на эл. почту,
               прикрепив демо ваших работ
             </div>
-            <div class="work__progress-box slider-main">
+            <div class="work__progress-box slider-main slider-main--second">
               <div class="work__progress-wrapper slider-wrapper">
                 <div class="work__progress-player slider-slide">
                   <span class="calamansi calamansi-test" data-skin="skins/calamansi-compact-2"
@@ -493,8 +496,9 @@
               </div>
             </div>
           </div>
-          <div class="slider-second-button-prev"></div>
-          <div class="slider-second-button-next"></div>
+          <div class="work__pagination">
+            <div class="slider-third-main-pagination"></div>
+          </div>
         </div>
       </section>
     </div>
@@ -568,10 +572,38 @@
           NEUMANN ft. D-V-R - Я так долго искал
         </h3>
         <div class="popup__inner">
-          <div class="popup__left">
+          <div class="popup__left-top">
             <div class="popup__left-image">
               <img src="images/popup-song/coverjpg.jpg" alt="фото обложки трека">
             </div>
+          </div>
+          <div class="popup-right-top">
+            <span class="popup__singer">
+              Neumann ft. d-v-r
+            </span>
+            <span class="popup__song">
+              Я так долго искал
+            </span>
+            <div class="popup__player">
+              <span class="calamansi calamansi-test" data-skin="skins/calamansi-compact"
+                data-source="images/О тебе.mp3">
+                <h2 class="song-title">Я так долго искал</h2>
+                <p class="song-subtitle">Memories | Album 2020</p>
+              </span>
+            </div>
+            <div class="popup__about">
+              <span class="popup__about-title">
+                О релизе
+              </span>
+              <div class="popup__about-text">
+                <p>
+                  Neumann - так долго искал ft. D-V-R (prod. by mokambossbeats)
+                  Наша новая работа в сотрудничестве с рэп исполнителем из России.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="popup__left-bottom">
             <div class="popup__remember popup-remember">
               <span class="popup-remember__title">
                 Упоминания
@@ -619,31 +651,7 @@
               </ul>
             </div>
           </div>
-          <div class="popup-right">
-            <span class="popup__singer">
-              Neumann ft. d-v-r
-            </span>
-            <span class="popup__song">
-              Я так долго искал
-            </span>
-            <div class="popup__player">
-              <span class="calamansi calamansi-test" data-skin="skins/calamansi-compact"
-                data-source="images/О тебе.mp3">
-                <h2 class="song-title">Я так долго искал</h2>
-                <p class="song-subtitle">Memories | Album 2020</p>
-              </span>
-            </div>
-            <div class="popup__about">
-              <span class="popup__about-title">
-                О релизе
-              </span>
-              <div class="popup__about-text">
-                <p>
-                  Neumann - так долго искал ft. D-V-R (prod. by mokambossbeats)
-                  Наша новая работа в сотрудничестве с рэп исполнителем из России.
-                </p>
-              </div>
-            </div>
+          <div class="popup__right-bottom">
             <div class="popup__another">
               <span class="popup__another-title">
                 Другие релизы

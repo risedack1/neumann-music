@@ -89,10 +89,10 @@ body {
 }
 
 .work__progress {
-    background-image: url('../images/guitar.svg'), url('../images/notes-process-bg.svg'), url('../images/circle-dots-bg.svg'), url('../images/drums.svg');
+    background-image: url('../images/guitar.svg'), url('../images/circle-dots-bg.svg'), url('../images/drums.svg');
     background-repeat: no-repeat;
-    background-position: 10% 0, 95% 20%, 100% 60%, 90% 90%;
-    background-size: 20%, 12%, 5%, 10%;
+    background-position: 10% 0, 100% 60%, 90% 90%;
+    background-size: 20%, 5%, 10%;
 }
 
 .footer {
@@ -115,6 +115,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.container--work {
+    margin-bottom: 50px;
 }
 
 .container--example {
@@ -350,6 +354,10 @@ div.footer__we h4 {
 }
 .example__result {
     padding-top: 0px !important;
+}
+
+.work__progress {
+    background-position: 10% 0, 100% 60%, 97% 90%;
 }
 .work__progress-wrapper {
     padding-top: 35px !important;
@@ -695,9 +703,6 @@ div.footer__we h4 {
     max-width: 40px !important;
 }
 }@media (max-width: 854px) {
-    .box__slider-img {
-    
-}
 .box__slider-play__img {
     margin-top: 5px;
 }
@@ -807,9 +812,6 @@ div.footer__we h4 {
     margin-top: 0 !important;
 }
 }@media (max-width: 592px) {
-    .box__slider {
-    
-}
 .box__slider-img img {
     max-width: 100% !important;
 }
@@ -2050,6 +2052,11 @@ header .about-us__image {
     height: 80%;
 }
 
+.example__pagination,
+.work__pagination {
+    text-align: center;
+}
+
 @media (max-width: 1650px) {
     .box__slider-play__img {
         margin-right: 0;
@@ -2066,10 +2073,12 @@ header .about-us__image {
 }
 
 @media (max-width: 1400px) {
-    .box__slider-img > img {
-        max-width: 70% !important;
+    .box__inner {
+        max-width: 80%;
     }
-
+    .box__slider {
+        max-width: 180px;
+    }
     .slider-buttons {
         margin-right: 130px;
     }
@@ -2164,6 +2173,10 @@ header .about-us__image {
     .example__result {
         margin-bottom: 50px;
     }
+
+    .box__inner {
+        height: 50vh !important;
+    }
 }
 
 @media (min-height: 1020px) and (max-width: 1370px) {
@@ -2183,6 +2196,10 @@ header .about-us__image {
 @media (max-width: 1030px) and (min-height: 768px) {
     .box__slider-img > img {
         max-width: 100% !important;
+    }
+
+    .box__inner {
+        height: 50vh !important;
     }
 }
 
@@ -2207,6 +2224,14 @@ header .about-us__image {
 
     .full-page-custom--header {
         height: calc(var(--vh, 1vh) * 100) !important;
+    }
+
+    .full-page-custom--footer {
+        height: calc(var(--vh, 1vh) * 100) !important;
+    }
+
+    .box__slider {
+        max-width: 250px;
     }
 
     .example__boxes {

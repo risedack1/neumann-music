@@ -89,17 +89,16 @@
 }
 
 .popup__inner {
-    display: flex;
+    display: grid;
+    grid-template: auto auto / 40% 60%;
+    grid-gap: 25px 55px;
 }
 
 .popup__left {
-    flex: 1 0 40%;
-    margin-right: 50px;
 }
 
 .popup__left-image {
     width: 100%;
-    margin-bottom: 25px;
 }
 
 .popup__left-image img {
@@ -126,7 +125,7 @@
 
 .popup-remember__item {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px;
     color: #cad0d8;
     margin-bottom: 3px;
@@ -180,7 +179,7 @@
 }
 
 .popup__about {
-    margin-bottom: 55px;
+    
 }
 
 .popup__about-title {
@@ -194,7 +193,7 @@
 
 .popup__about-text {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 22px;
     color: #cad0d8;
 }
@@ -363,7 +362,8 @@
 
 @media (max-width: 768px) {
     .popup__inner {
-        flex-direction: column;
+        grid-template: repeat(3, auto) / 100%;
+        grid-gap: 0 0;
     }
 
     .popup__title {

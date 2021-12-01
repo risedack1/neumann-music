@@ -131,12 +131,21 @@ function slideCheck() {
 
     } else {
         secondSlider();
-        const swiperSecond = new Swiper('.slider-main', {
+        const swiperSecond = new Swiper('.slider-main--first', {
             slidesPerView: 1,
 
-            navigation: {
-                nextEl: '.slider-second-button-next',
-                prevEl: '.slider-second-button-prev',
+            pagination: {
+                el: '.slider-main-pagination',
+                clickable: true,
+            },
+        });
+
+        const swiperThird = new Swiper('.slider-main--second', {
+            slidesPerView: 1,
+
+            pagination: {
+                el: '.slider-third-main-pagination',
+                clickable: true,
             },
         });
     }
