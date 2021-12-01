@@ -672,9 +672,7 @@ div.footer__we h4 {
 }
 .about-us {
     max-width: 525px;
-    height: 100% !important;
     left: 50%;
-    height: 90% !important;
 }
 .about__arrow {
     margin-top: auto !important;
@@ -685,7 +683,7 @@ div.footer__we h4 {
     height: 160px;
 }
 .about-texts {
-    height: 63%;
+    height: 50vh;
     overflow: auto;
     margin-top: 17px;
 }
@@ -1306,7 +1304,6 @@ header .about-us__image {
     display: none;
     z-index: 10;
     max-width: 868px;
-    max-height: 90%;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%,  -50%);
@@ -1319,8 +1316,7 @@ header .about-us__image {
 .about-us__container {
     position: relative;
     margin: 0 auto;
-    height: 100%;
-    padding: 0 20px;
+    padding: 0 20px 10px;
     background-color: #232627;
 }
 .about-us .cross-about {
@@ -2365,7 +2361,7 @@ header .about-us__image {
 
 @media (max-height: 570px) {
     .about-texts {
-        height: 53%;
+        height: 50vh;
     }
 }
 
