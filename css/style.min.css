@@ -1400,6 +1400,10 @@ header .about-us__image {
     height: 100%; */
 }
 
+.finished__work-inner {
+    margin: auto 0;
+}
+
 .finished__work-title {
     font-size: 22px;
     font-weight: 800;
@@ -1449,7 +1453,8 @@ header .about-us__image {
 
 .box__inner {
     margin-bottom: auto;
-    height: 80vh;
+    /* height: 80vh; */
+    height: 40vh;
 }
 .box__slider-img img {
     max-width: 90%;
@@ -1711,6 +1716,10 @@ header .about-us__image {
     text-align: center;
     color: #FFFFFF;
     padding-bottom: 50px;
+}
+
+.work__progress-message {
+    text-align: center;
 }
 .work__box-player {
     max-width: 482px;
@@ -2155,7 +2164,8 @@ header .about-us__image {
     }
 
     .work__progress-text {
-        margin-bottom: 20px;
+        /* margin-bottom: 20px; */
+        margin-bottom: 50px;
     }
 
     .work__progress-player {

@@ -84,8 +84,10 @@ const swiper = new Swiper('.box__inner', {
     breakpoints: {
         1600: {
             slidesPerView: 3,
+            slidesPerGroup: 3,
             grid: {
                 rows: 2,
+                fill: 'row',
             },
             spaceBetween: 20,
 
@@ -152,7 +154,6 @@ function slideCheck() {
 }
 slideCheck();
 
-Calamansi.autoload();
 
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -168,3 +169,14 @@ $(function () {
         }, 1500);
     });
 });
+
+Calamansi.autoload();
+
+// Fancybox.defaults.dragToClose = false;
+
+// Fancybox.bind("[data-fancybox]", {
+//     infinite: false,
+//     template: {
+//         closeButton: '<div class="calamansi" data-skin="skins/basic" data-source="images/close-popup.mp3"></div>',
+//     }
+// });

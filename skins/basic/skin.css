@@ -1,5 +1,7 @@
 .calamansi-skin--basic {
     width: 100%;
+    opacity: 0;
+    transform: translateX(-20px);
     box-sizing: border-box;
     height: 56px;
     box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.07);
