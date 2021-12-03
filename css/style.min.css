@@ -286,7 +286,7 @@ div.footer__we h4 {
 
 
 .footer__we img {
-    margin-top: 0px !important;
+    margin-top: -5px !important;
     max-width: 100px !important;
 }
 }@media (max-width: 1600px) {
@@ -457,7 +457,7 @@ div.footer__we h4 {
 }
 .footer__we img {
     padding-top: -3px !important;
-    margin-top: 0px !important;
+    margin-top: -4px !important;
     max-width: 100px !important;
 }
 .example__box-inner {
@@ -730,7 +730,7 @@ div.footer__we h4 {
     padding-top: 26px !important;
 }
 .footer__we img {
-    margin-top: 0 !important;
+    margin-top: -4px !important;
 }
 }@media (max-width: 775px) {
     .about__title {
@@ -810,7 +810,7 @@ div.footer__we h4 {
     padding-bottom: 0 !important;
 }
 .footer__we img {
-    margin-top: 0 !important;
+    margin-top: -4px !important;
 }
 }@media (max-width: 592px) {
 .box__slider-img img {
@@ -1831,7 +1831,7 @@ header .about-us__image {
     cursor: pointer;
 }
 .contacts__item-img__cen {
-    margin-right: 65px;
+    margin-right: 60px;
     cursor: pointer;
 }
 .yu {
