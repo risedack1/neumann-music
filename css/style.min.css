@@ -57,6 +57,10 @@ body {
     justify-content: center;
 }
 
+.full-page-custom--header {
+    height: calc(var(--vh, 1vh) * 120);
+}
+
 .full-page-wrapper--process {
     position: relative;
     background-image:  linear-gradient(270deg, #83F283 0%, #33EF95 16.67%, #00EBA9 31.77%, #00E7BC 41.67%, #00C5C8 52.6%, #32A3C4 64.58%, #8881BD 74.48%, #C257B7 84.9%, #FF15AC 100%);
@@ -2068,6 +2072,19 @@ header .about-us__image {
 .example__pagination,
 .work__pagination {
     text-align: center;
+}
+
+.example__pagination,
+.box__inner-pagination {
+    width: 30%;
+    margin: 0 auto;
+    padding: 7px 0;
+    border-radius: 20px;
+    border: 1px solid #51575b;
+}
+
+.example__pagination > div {
+    line-height: 0;
 }
 
 @media (max-width: 1650px) {

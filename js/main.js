@@ -160,6 +160,11 @@ slideCheck();
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
+window.addEventListener('resize', () => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
+
 $(function () {
 
     $('.header__menu a, .footer__arrow a, .about__arrow a').on("click", function (event) {
