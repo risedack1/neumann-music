@@ -122,15 +122,13 @@
 }
 
 .popup-remember__list {
-    margin-bottom: 20px;
+    margin-bottom: 35px;
 }
 
 .popup-remember__item {
-    font-family: 'Ubuntu';
-    font-weight: 400;
-    text-align: initial;
+    font-weight: 700;
     font-size: 16px;
-    line-height: 20px;
+    line-height: 24px;
     color: #cad0d8;
     margin-bottom: 3px;
 }
@@ -141,11 +139,9 @@
 }
 
 .music-social__title {
-    font-family: 'Ubuntu';
-    font-weight: 400;
-    text-align: initial;
-    font-size: 16px;
-    line-height: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
     color: #cad0d8;
     margin-right: 11px;
 }
@@ -181,7 +177,7 @@
 }
 
 .popup__player {
-    margin-bottom: 40px;
+    margin-bottom: 70px;
 }
 
 .popup__about {
@@ -198,11 +194,9 @@
 }
 
 .popup__about-text {
-    font-family: 'Ubuntu';
-    font-weight: 400;
-    text-align: initial;
+    font-weight: 500;
     font-size: 16px;
-    line-height: 20px;
+    line-height: 22px;
     color: #cad0d8;
 }
 
