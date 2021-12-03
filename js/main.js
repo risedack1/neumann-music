@@ -68,6 +68,7 @@ const swiper = new Swiper('.box__inner', {
     slidesPerView: 1,
     grid: {
         rows: 1,
+        fill: 'row',
     },
 
     navigation: {
@@ -100,6 +101,7 @@ const swiper = new Swiper('.box__inner', {
             slidesPerView: 4,
             grid: {
                 rows: 2,
+                fill: 'row',
             },
             spaceBetween: 20,
 
