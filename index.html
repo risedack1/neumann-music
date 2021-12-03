@@ -72,14 +72,20 @@
             вы можете написать их тут
           </div>
           <form class="cooperation__form">
+            <!-- Hidden Required Fields -->
+            <input type="hidden" name="project_name" value="Neumann music">
+            <input type="hidden" name="admin_email" value="dsriga@gmail.com">
+            <input type="hidden" name="form_subject" value="Header form">
+            <!-- END Hidden Required Fields -->
+
             <p class="cooperation__text-gradient"><span>E-mail/Тел</span></p>
-            <input type="email" placeholder="info@gmail.com" name="login">
+            <input type="text" placeholder="info@gmail.com" name="login" required>
             <p class="cooperation__text">Ваше сообщение</p>
-            <textarea name="text"></textarea>
+            <textarea class="cooperation__text-form" name="text" required></textarea>
+            <div class="form__btn">
+              <button class="form__btn-link" type="submit">Отправить</button>
+            </div>
           </form>
-          <div class="form__btn">
-            <a class="form__btn-link" href="#">Отправить</a>
-          </div>
         </div>
         <div class="about">
           <div class="about__name"><span>Neumann Music</span></div>

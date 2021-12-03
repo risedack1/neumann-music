@@ -1286,16 +1286,23 @@ header .about-us__image {
     line-height: 16px;
     padding-bottom: 6px;
 }
+
+.cooperation__text-form {
+    margin-bottom: 30px;
+}
+
 .form__btn {
     text-align: center;
     padding-bottom: 38px;
 }
-.form__btn a {
+.form__btn button {
     color: #fff;
     font-family: Montserrat;
     font-weight: 700;
     font-size: 13px;
     line-height: 14px;
+    border: none;
+    cursor: pointer;
     background: -webkit-gradient(linear,  left top,  right top,  from(#F920AE),  color-stop(7.29%,  #DA42B3),  color-stop(15.1%,  #A86AB9),  color-stop(25.52%,  #6E88BF),  color-stop(38.54%,  #439BC2),  color-stop(52.6%,  #1DB2C6),  color-stop(66.67%,  #00CCCA),  color-stop(81.77%,  #00E6BE),  to(#4EF08C));
     background: -o-linear-gradient(left,  #F920AE 0%,  #DA42B3 7.29%,  #A86AB9 15.1%,  #6E88BF 25.52%,  #439BC2 38.54%,  #1DB2C6 52.6%,  #00CCCA 66.67%,  #00E6BE 81.77%,  #4EF08C 100%);
     background: linear-gradient(90deg,  #F920AE 0%,  #DA42B3 7.29%,  #A86AB9 15.1%,  #6E88BF 25.52%,  #439BC2 38.54%,  #1DB2C6 52.6%,  #00CCCA 66.67%,  #00E6BE 81.77%,  #4EF08C 100%);
@@ -2090,6 +2097,18 @@ header .about-us__image {
     }
     .slider-buttons {
         margin-right: 130px;
+    }
+
+    .about-us__image {
+        height: 130px;
+    }
+
+    .about-us__logo {
+        width: 60px;
+    }
+
+    .about-us__logo img {
+        width: 100%;
     }
 }
 
