@@ -315,6 +315,7 @@ div.footer__we h4 {
 }
 .work__progress-text {
     padding-bottom: 0 !important;
+    margin-bottom: 70px;
     font-size: 20px !important;
     line-height: 55px !important;
 }
@@ -1830,7 +1831,7 @@ header .about-us__image {
     cursor: pointer;
 }
 .contacts__item-img__cen {
-    margin-right: 55px;
+    margin-right: 65px;
     cursor: pointer;
 }
 .yu {
@@ -1889,9 +1890,6 @@ header .about-us__image {
     font-weight: 800;
     font-size: 12px;
     line-height: 15px;
-}
-.footer__we img {
-    margin-top: 20px;
 }
 
 .slick-slider {
@@ -2183,7 +2181,7 @@ header .about-us__image {
 
     .work__progress-text {
         /* margin-bottom: 20px; */
-        margin-bottom: 50px;
+        margin-bottom: 70px;
     }
 
     .work__progress-player {
