@@ -115,7 +115,7 @@
 .popup-remember__title {
     display: block;
     font-weight: 400;
-    font-size: 26px;
+    font-size: 22px;
     line-height: 35px;
     text-transform: uppercase;
     margin-bottom: 11px;
@@ -126,9 +126,11 @@
 }
 
 .popup-remember__item {
-    font-weight: 700;
+    font-family: 'Ubuntu';
+    font-weight: 400;
+    text-align: initial;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 20px;
     color: #cad0d8;
     margin-bottom: 3px;
 }
@@ -139,9 +141,11 @@
 }
 
 .music-social__title {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 24px;
+    font-family: 'Ubuntu';
+    font-weight: 400;
+    text-align: initial;
+    font-size: 16px;
+    line-height: 20px;
     color: #cad0d8;
     margin-right: 11px;
 }
@@ -162,7 +166,7 @@
 .popup__singer {
     display: block;
     font-weight: 400;
-    font-size: 26px;
+    font-size: 22px;
     line-height: 35px;
     text-transform: uppercase;
     margin-bottom: 4px;
@@ -187,16 +191,18 @@
 .popup__about-title {
     display: block;
     font-weight: 400;
-    font-size: 26px;
+    font-size: 22px;
     line-height: 35px;
     text-transform: uppercase;
     margin-bottom: 11px;
 }
 
 .popup__about-text {
-    font-weight: 500;
+    font-family: 'Ubuntu';
+    font-weight: 400;
+    text-align: initial;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 20px;
     color: #cad0d8;
 }
 
@@ -207,7 +213,7 @@
 .popup__another-title {
     display: block;
     font-weight: 400;
-    font-size: 26px;
+    font-size: 22px;
     line-height: 35px;
     text-transform: uppercase;
     margin-bottom: 25px;
