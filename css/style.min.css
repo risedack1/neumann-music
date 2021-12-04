@@ -657,7 +657,7 @@ div.footer__we h4 {
     transform: translateX(-100%); */
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: all 0.3s;
     top: 0px;
     display: block !important;
 }

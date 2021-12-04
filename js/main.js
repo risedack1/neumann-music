@@ -199,11 +199,7 @@ $(function () {
 
 });
 
-const calam = Calamansi.autoload(document.querySelectorAll('.calamansi'), {
-
-});
-
-calam.nextTrack();
+Calamansi.autoload();
 
 
 
