@@ -24,10 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     aboutBtn.addEventListener('click', () => {
         aboutUs.classList.add('active-about');
+        document.querySelector('body').classList.add('_lock');
     });
 
     aboutClose.addEventListener('click', () => {
         aboutUs.classList.remove('active-about');
+        document.querySelector('body').classList.remove('_lock');
     });
 
     const toggleMenu = function () {
@@ -80,6 +82,7 @@ const swiper = new Swiper('.box__inner', {
         el: '.box__inner-pagination',
         clickable: true,
         dynamicBullets: true,
+        dynamicMainBullets: 3,
     },
 
     breakpoints: {
@@ -196,7 +199,13 @@ $(function () {
 
 });
 
-Calamansi.autoload();
+const calam = Calamansi.autoload(document.querySelectorAll('.calamansi'), {
+
+});
+
+calam.nextTrack();
+
+
 
 // Fancybox.defaults.dragToClose = false;
 

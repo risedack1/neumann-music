@@ -168,6 +168,10 @@
     margin-bottom: 4px;
 }
 
+._lock {
+    overflow: hidden;
+}
+
 .popup__song {
     display: block;
     font-weight: 500;
