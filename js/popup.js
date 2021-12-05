@@ -59,15 +59,27 @@ let popup_link = document.querySelectorAll('.popup-link');
 let popups = document.querySelectorAll('.popup');
 for (let index = 0; index < popup_link.length; index++) {
     const el = popup_link[index];
+    let item = el.getAttribute('href').replace('#', '');
+    let video = el.getAttribute('data-video');
+    if (window.location.href.split('#')[1]) {
+        popup_open(item, video);
+    }
+
     el.addEventListener('click', function (e) {
         if (unlock) {
-            let item = el.getAttribute('href').replace('#', '');
-            let video = el.getAttribute('data-video');
-            popup_open(item, video);
+            // let item = el.getAttribute('href').replace('#', '');
+            // let video = el.getAttribute('data-video');
+            history.pushState('', '', '#' + item);
+            if (window.location.href.split('#')[1]) {
+                popup_open(item, video);
+            }
         }
         e.preventDefault();
     })
 }
+
+console.log(window.location.href.split('#')[1]);
+
 for (let index = 0; index < popups.length; index++) {
     const popup = popups[index];
     popup.addEventListener("click", function (e) {
