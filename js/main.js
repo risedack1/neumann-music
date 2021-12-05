@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const feetBackButton = document.querySelector('.header__btn-cooperation');
     const feetBackClose = document.querySelector('.cooperation__close');
     const feetBackForm = document.querySelector('.cooperation__menu');
-    const aboutBtn = document.querySelector('.about__btn-link');
-    const aboutUs = document.querySelector('.about-us');
-    const aboutClose = document.querySelector('.cross-about');
+    // const aboutBtn = document.querySelector('.about__btn-link');
+    // const aboutUs = document.querySelector('.about-us');
+    // const aboutClose = document.querySelector('.cross-about');
 
     window.addEventListener('scroll', () => {
         const topButton = document.querySelector('.footer__arrow');
@@ -22,15 +22,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    aboutBtn.addEventListener('click', () => {
-        aboutUs.classList.add('active-about');
-        document.querySelector('body').classList.add('_lock');
-    });
+    // aboutBtn.addEventListener('click', () => {
+    //     aboutUs.classList.add('active-about');
+    //     document.querySelector('body').classList.add('_lock');
+    // });
 
-    aboutClose.addEventListener('click', () => {
-        aboutUs.classList.remove('active-about');
-        document.querySelector('body').classList.remove('_lock');
-    });
+    // aboutClose.addEventListener('click', () => {
+    //     aboutUs.classList.remove('active-about');
+    //     document.querySelector('body').classList.remove('_lock');
+    // });
 
     const toggleMenu = function () {
         feetBackForm.classList.toggle('active');

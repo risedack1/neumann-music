@@ -270,6 +270,16 @@
     line-height: 11px;
 }
 
+.popup--about .popup__body{
+    background-color: transparent;
+}
+
+.popup--about .popup__close {
+    width: 20px !important;
+    height: 20px !important;
+    top: 30px !important;
+}
+
 @media (max-width: 1100px) {
     .popup__body {
         padding: 40px 20px 33px 20px;
@@ -404,6 +414,10 @@
 
     .another-item__button {
         flex-shrink: 1;
+    }
+
+    .popup--about .popup__close {
+        top: 10px !important;
     }
 }
 

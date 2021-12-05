@@ -1332,7 +1332,6 @@ header .about-us__image {
 }
 .about-us {
     position: absolute;
-    display: none;
     z-index: 10;
     max-width: 868px;
     top: 50%;
