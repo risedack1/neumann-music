@@ -1,20 +1,24 @@
 .calamansi-skin--basic {
     width: 100%;
     opacity: 0;
-    transform: translateX(-20px);
     box-sizing: border-box;
-    height: 56px;
+    height: 100%;
     box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.07);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 0;
+    padding-right: 0;
     border-radius: 4px;
     user-select: none;
     -webkit-user-select: none;
     background-color: #fff;
 }
+
+.calamansi-skin--basic .clmns--control {
+    width: 100%;
+}
+
 .calamansi-skin--basic .clmns--slider {
     flex-grow: 1;
     background-color: #D8D8D8;

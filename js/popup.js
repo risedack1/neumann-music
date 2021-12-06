@@ -76,8 +76,6 @@ for (let index = 0; index < popup_link.length; index++) {
     })
 }
 
-console.log(window.location.href.split('#')[1]);
-
 for (let index = 0; index < popups.length; index++) {
     const popup = popups[index];
     popup.addEventListener("click", function (e) {

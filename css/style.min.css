@@ -34,8 +34,12 @@ body {
     font-weight: 700;
 }
 
+a {
+    color: inherit;
+}
+
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 1px;
 }
 
 ::-webkit-scrollbar-track {
@@ -43,7 +47,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    width: 5px;
+    width: 1px;
     background-color: rgba(0, 0, 0, 1);
     border-radius: 20px;
 }
@@ -179,8 +183,12 @@ body {
 }@media (min-width: 1650px) {
     .header__menu-item {
     font-size: 16px;
-    padding-right: 34px;
 }
+
+.header__menu-items {
+    margin-right: 20px !important;
+}
+
 .header__btn a {
     font-size: 14px;
 }
@@ -692,7 +700,13 @@ div.footer__we h4 {
 }
 .header__menu-items li {
     padding-bottom: 35px;
+    margin-right: 0 !important;
 }
+
+.header__menu-items {
+    margin-right: 0 !important;
+}
+
 .header__menu-item {
     font-size: 18px !important;
     line-height: 30px;
@@ -1126,12 +1140,17 @@ header .about-us__image {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-right: 48px;
 }
+
+.header__menu-items li:not(:last-child) {
+    margin-right: 50px;
+}
+
 .header__menu-item {
     color: #fff;
     font-size: 16px;
     line-height: 15px;
-    padding-right: 55px;
 }
 .header__btn-cooperation {
     color: #fff;
@@ -1834,6 +1853,7 @@ header .about-us__image {
     text-align: center;
     padding-bottom: 100px;
     padding-top: 45px;
+    color: #fff;
 }
 .contacts__item-link a {
     color: #fff;
@@ -1842,6 +1862,7 @@ header .about-us__image {
     line-height: 29px;
     font-weight: 400;
     padding-top: 20px;
+    color: inherit;
 }
 .contacts__item-link {
     padding-top: 20px;
@@ -1851,8 +1872,9 @@ header .about-us__image {
     cursor: pointer;
 }
 .contacts__item-img__cen {
-    margin-right: 60px;
+    margin-right: 0;
     cursor: pointer;
+    margin-left: 10px;
 }
 .yu {
     padding-left: 20px;
@@ -2309,7 +2331,7 @@ header .about-us__image {
     }
 
     .full-page-custom--header {
-        height: calc(var(--vh, 1vh) * 100) !important;
+        height: 88vh !important;
     }
 
     .full-page-custom--footer {

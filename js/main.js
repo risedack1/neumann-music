@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const body = document.querySelector('body');
+    const menuItems = document.querySelectorAll('.header__menu-item');
     const burgerButton = document.querySelector('.burger');
     const closeButton = document.querySelector('.header__cross-menu');
     const menu = document.querySelector('.header__inner');
@@ -21,16 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
             topButton.classList.remove('active');
         }
     });
-
-    // aboutBtn.addEventListener('click', () => {
-    //     aboutUs.classList.add('active-about');
-    //     document.querySelector('body').classList.add('_lock');
-    // });
-
-    // aboutClose.addEventListener('click', () => {
-    //     aboutUs.classList.remove('active-about');
-    //     document.querySelector('body').classList.remove('_lock');
-    // });
 
     const toggleMenu = function () {
         feetBackForm.classList.toggle('active');
@@ -58,10 +50,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     burgerButton.addEventListener('click', () => {
         menu.classList.add('active-menu');
+        body.classList.add('_lock');
     });
 
     closeButton.addEventListener('click', () => {
         menu.classList.remove('active-menu');
+        body.classList.remove('_lock');
+    });
+
+    menuItems.forEach(el => {
+        el.addEventListener('click', function () {
+            body.classList.remove('_lock');
+        });
     });
 });
 
@@ -201,13 +201,47 @@ $(function () {
 
 Calamansi.autoload();
 
+// CalamansiEvents.on('play', function (e) {
+//     console.log('play');
+//     Calamansi.audio.stop();
+// });
 
+// const players = document.querySelector('.calamansi-before-first');
+// const playersSecond = document.querySelector('.calamansi-after-first');
 
-// Fancybox.defaults.dragToClose = false;
+// for (let i = 0; i < players.length; index++) {
+//     const el = players[i];
+// }
 
-// Fancybox.bind("[data-fancybox]", {
-//     infinite: false,
-//     template: {
-//         closeButton: '<div class="calamansi" data-skin="skins/basic" data-source="images/close-popup.mp3"></div>',
-//     }
+// var playersFirst = new Calamansi(players, {
+//     skin: '../skins/calamansi-compact',
+//     playlists: {
+//         'Classics': [{
+//             source: '../images/before-after/DO - ja tak dolgo iskal.mp3',
+//         }],
+//     },
+// });
+
+// var playersTest = new Calamansi(playersSecond, {
+//     skin: '../skins/calamansi-compact',
+//     playlists: {
+//         'Classics': [{
+//             source: '../images/before-after/DO - ja tak dolgo iskal.mp3',
+//         }],
+//     },
+// });
+
+// players.forEach(el => {
+//     new Calamansi(el, {
+//         skin: '../skins/calamansi-compact',
+//         playlists: {
+//             'Classics': [{
+//                     source: '../images/before-after/DO - ja tak dolgo iskal.mp3',
+//                 },
+//                 {
+//                     source: '../images/before-after/DO - ja tak dolgo iskal.mp3',
+//                 },
+//             ],
+//         },
+//     });
 // });
